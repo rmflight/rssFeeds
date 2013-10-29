@@ -24,11 +24,11 @@ splitstate false
 
 # The maximum number of articles to show on the generated page.
 # Set this to 0 for no limit.
-maxarticles 200
+maxarticles 0
 
 # The maximum age of articles to show on the generated page.
 # Set this to 0 for no limit.
-maxage 0
+maxage 1
 
 # The age after which articles will be discarded if they do not appear
 # in a feed. Set this to a larger value if you want your rawdog output
