@@ -3,6 +3,7 @@
 <span class="itemtitle">__title__</span>
 <span class="itemsave"><input id="button-__hash__" type="button" onclick="sendPatch('__url__', this.id)" value="Save"></span>
 <span class="itemfrom">[__feed_title__]</span>
+<span class="itemdate">__date__</span>
 </p>
 __if_description__<div class="itemdescription">
 __description__
