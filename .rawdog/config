@@ -28,7 +28,7 @@ maxarticles 0
 
 # The maximum age of articles to show on the generated page.
 # Set this to 0 for no limit.
-maxage 1
+maxage 0
 
 # The age after which articles will be discarded if they do not appear
 # in a feed. Set this to a larger value if you want your rawdog output
@@ -157,7 +157,7 @@ outputfile /mlab/data/rmflight/Documents/projects/personal/rssFeeds/index.html
 # (This works by controlling whether the default template includes
 # __refresh__; if you use a custom template, __refresh__ is always
 # available.)
-userefresh true
+userefresh false
 
 # Whether to show the list of active feeds in the generated HTML.
 # (This works by controlling whether the default template includes
@@ -210,7 +210,7 @@ tidyhtml true
 # displaying several feeds and want new articles to appear in the right
 # chronological place). If this is false, then articles will first be
 # sorted by the time that rawdog first saw them.
-sortbyfeeddate true
+sortbyfeeddate false
 
 # Whether to consider articles' unique IDs or GUIDs when updating rawdog's
 # database. If you turn this off, then rawdog will create a new article in its
@@ -280,6 +280,55 @@ changeconfig true
 #	define_myclass broken
 #feed 3h http://proxyfeed.example.com/proxied.rss http_proxy=http://localhost:1234/
 #feed 3h http://dupsfeed.example.com/duplicated.rss allowduplicates=true
-feed 24h http://www.biodatamining.org/latest/rss
-feed 24h http://genome.cshlp.org/rss/current.xml
 
+# bioinformatics journals
+feed 24h http://www.biodatamining.org/latest/rss define_group=journals
+feed 24h http://genome.cshlp.org/rss/current.xml define_group=journals
+feed 24h http://bioinformatics.oxfordjournals.org/rss/recent.xml define_group=journals
+feed 24h http://www.biomedcentral.com/bmcbioinformatics/rss define_group=journals
+feed 24h http://feeds.nature.com/nature/rss/current define_group=journals
+feed 24h http://nar.oxfordjournals.org/rss/recent.xml define_group=journals
+feed 24h http://www.pnas.org/rss/current.xml define_group=journals
+feed 24h http://www.sciencemag.org/rss/current.xml define_group=journals
+
+feed 24h http://www.plosone.org/article/feed/search?unformattedQuery=subject%3A%22Computational+biology%22&sort=Date%2C+newest+first&filterJournals=PLoSONE define_group=journals
+feed 24h http://feeds.plos.org/ploscompbiol/NewArticles define_group=journals
+
+# other journals
+feed 24h https://peerj.com/articles/index.atom define_group=journals
+feed 24h https://peerj.com/preprints/index.atom define_group=journals
+feed 24h http://elife.elifesciences.org/rss/recent.xml define_group=journals
+
+
+# other stuff I read
+feed 24h http://feeds.feedburner.com/AlbertMohlersBlog define_group=religous
+feed 24h http://raycomfortfood.blogspot.com/feeds/posts/default define_group=religous
+feed 24h http://feeds.feedburner.com/challies/XhEt define_group=religous
+feed 24h http://feeds.9marks.org/9marks/blog define_group=religous
+feed 24h http://feeds.feedburner.com/DGblog define_group=religous
+feed 24h http://www3.revkevindeyoung.com/ define_group=religous
+feed 24h http://gairneybridge.wordpress.com/feed/ define_group=religous
+feed 24h http://cbmw.org/Blog/RSS2 define_group=religous
+feed 24h http://goodnewsfortoronto.wordpress.com/feed/ define_group=religous
+feed 24h http://www.aomin.org/aoblog/index.php/feed/ define_group=religous
+feed 24h http://feeds.feedburner.com/PureChurchBlog define_group=religous
+feed 24h http://teampyro.blogspot.com/atom.xml define_group=religous
+feed 24h http://feeds.feedburner.com/Reformation21 define_group=religous
+feed 24h http://feeds.feedburner.com/Reformation21Blog define_group=religous
+feed 24h http://www.placefortruth.org/placefortruth/rss.xml define_group=religous
+feed 24h http://www.shepherdpress.com/feed/ define_group=religous
+
+# programming and bioinformatics blogs
+feed 24h http://feeds.feedburner.com/vincebuffalo define_group=bioBlogs
+feed 24h http://feeds.feedburner.com/NextGenetics define_group=bioBlogs
+feed 24h http://feeds2.feedburner.com/bcbio define_group=bioBlogs
+feed 24h http://bytesizebio.net/feed/ define_group=bioBlogs
+feed 24h http://www.homolog.us/blogs/feed/ define_group=bioBlogs
+feed 24h http://feeds.feedburner.com/RBloggers define_group=bioBlogs
+feed 24h http://feeds.feedburner.com/RobJHyndman-ResearchTips define_group=bioBlogs
+feed 24h http://solomonmessing.wordpress.com/feed/ define_group=bioBlogs
+feed 24h http://jeffreybreen.wordpress.com/feed/ define_group=bioBlogs
+feed 24h http://nsaunders.wordpress.com/feed/ define_group=bioBlogs
+feed 24h http://yihui.name/en/feed/ define_group=bioBlogs
+feed 24h http://simplystatistics.org/feed/ define_group=bioBlogs
+feed 24h http://carlboettiger.info/blog.xml define_group=bioBlogs
