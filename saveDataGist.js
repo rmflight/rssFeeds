@@ -143,7 +143,7 @@ function sendPatch(patchContent, buttonID) {
   if (gistContents !== 'undefined') {
   
   	var tmpContents = gistContents['files']['savedURL.md']['content'];
-  	var newContents = "\n" + tmpContents + patchContent + "\n\n";
+  	var newContents = tmpContents + patchContent + "\n\n";
   	var newData = {
   					"files": {
   						"savedURL.md" : {
